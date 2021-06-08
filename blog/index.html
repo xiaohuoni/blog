@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    window.onerror = function (message, source, lineno, colno, exception) {
+      console.log(message);
+      console.log(source);
+      console.log(lineno);
+      console.log(colno);
+      console.log(exception);
+    }
+    window.onunhandledrejection = event => {
+      console.warn(`UNHANDLED PROMISE REJECTION: ${JSON.stringify(event.reason)}`);
+      event.preventDefault();
+    };
+  </script>
+  <script>
+    // var a -1;
+    function myExecutorFunc(resolutionFunc, rejectionFunc) {
+      rejectionFunc(777);
+    }
+    var myPromise = new Promise(myExecutorFunc).then().catch((data) => console.log(data));
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
