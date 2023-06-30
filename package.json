@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "无才可去补苍天，枉入红尘若许年",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/marked": "^5.0.0",
+    "@types/node": "^20.3.2",
+    "ejs": "^3.1.9",
+    "marked": "^5.1.0",
+    "tsx": "^3.12.7",
+    "zx": "^7.2.2"
+  }
+}
